@@ -38,9 +38,8 @@ function AlertDialogOverlay({
       className={cn(
         'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50',
         className,
-
       )}
-      {...(props as any)}
+      {...props}
     />
   )
 }
@@ -115,7 +114,6 @@ function AlertDialogDescription({
       data-slot="alert-dialog-description"
       className={cn('text-muted-foreground text-sm', className)}
       {...props}
-      {...( {} as any )}
     />
   )
 }
@@ -128,7 +126,6 @@ function AlertDialogAction({
     <AlertDialogPrimitive.Action
       className={cn(buttonVariants(), className)}
       {...props}
-      {...( {} as any )}
     />
   )
 }
@@ -141,7 +138,6 @@ function AlertDialogCancel({
     <AlertDialogPrimitive.Cancel
       className={cn(buttonVariants({ variant: 'outline' }), className)}
       {...props}
-      {...( {} as any )}
     />
   )
 }
